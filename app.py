@@ -6,7 +6,7 @@ app = Flask(__name__)
 CORS(app)
 
 
-@app.route('/fetch-emoji')
+@app.route('/fetch_emoji')
 def emoji_return():
     name = request.args.get('name', default='', type=str)
     emoji = fetch_emoji(name)
