@@ -1,9 +1,9 @@
 from flask import Flask, jsonify, request
 from fetch_emoji import fetch_emoji
-import flask_cors
+from flask_cors import CORS
 
 app = Flask(__name__)
-flask_cors.CORS(app)
+CORS(app)
 
 
 @app.route('/fetch-emoji')
